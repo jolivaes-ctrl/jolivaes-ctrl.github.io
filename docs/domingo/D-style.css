@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  /* Background image with fallback color */
+  background:linear-gradient(135deg, #44c6c6, #4486c6);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll; /* optional: makes background stay when scrolling */
+  background-size: cover; /* cover entire viewport */
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Optional dark overlay to improve text contrast. If you don't want an overlay, remove these rules. */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(0,0,0,0.25);
+  pointer-events: none; /* allow clicks through overlay */
+  z-index: -1; /* keep behind content */
+}
+
+.container {
+  max-width: 475px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  body { margin: 10px; padding: 10px; }
+  .container { padding: 14px; border-radius: 6px; }
+  button { padding: 12px; font-size: 15px; }
+  .debug-btn { padding: 6px 8px; font-size: 12px; }
+  .emoji-palette { gap: 4px; padding: 6px; }
+  .emoji-palette button { font-size: 18px; padding: 6px; }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Label variants */
+.label-primary {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #005884;
+}
+
+.label-secondary {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #666666;
+  font: 100%/1.5 "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"],
+select,
+input[type="color"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* textarea (invitation) styling */
+textarea#whatsappMessage {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none; /* we'll auto-grow instead of manual resize */
+  overflow: hidden;
+  min-height: 44px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 17px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #0170a8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #29b0f3;
+}
+
+/* Debug button: less prominent but accessible */
+.debug-btn {
+  background-color: transparent;
+  color: #666;
+  border: 1px dashed #ccc;
+  padding: 8px 10px;
+  font-size: 12px;
+  width: auto;
+  display: inline-block;
+  margin-left: 8px;
+  opacity: 0.6;
+}
+.debug-btn:hover {
+  opacity: 1;
+  color: #222;
+  border-color: #bbb;
+}
+
+#generatedImage {
+  display: none;
+  margin-top: 20px;
+  max-width: 100%;
+  
+  border: 1px solid #ccc;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2d89ef;
+}
+
+/* emoji palette */
+.emoji-palette {
+  display: none; /* hidden by default, shown when input focused */
+  gap: 6px;
+  align-items: center;
+  /* will be positioned absolutely in JS so it floats above other content */
+  position: absolute;
+  z-index: 9999; /* ensure it's above other content */
+  background: white;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.emoji-palette.show {
+  display: flex;
+}
+.emoji-palette button {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 4px 6px;
+  margin: 0;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.emoji-palette button { pointer-events: auto; }
+.emoji-palette button:hover { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.06); }
+
+/* QR area styling */
+#qrArea img { width: 200px; height: 200px; }
