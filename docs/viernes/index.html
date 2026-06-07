@@ -1,0 +1,89 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viernes | Programa de Cultos</title>
+  <link rel="stylesheet" href="VH-style.css">
+  <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <text y='0.9em' font-size='90'>😎</text>
+    </svg>">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Culto de los Viernes</h1>
+
+    <!-- Información general -->
+    <form id="generalInfo">
+
+      <label for="Grupo" class="label-primary">Grupo:</label>
+      <select id="Grupo">
+        <option value="">Seleccione...</option>
+        <option value="Mujeres">Mujeres</option>
+        <option value="Hombres">Hombres</option>
+        <option value="Jóvenes">Jóvenes</option>
+        <option value="Niños">Niños</option>
+        <option value="Viernes">Viernes</option>
+      </select>
+
+      <label for="serviceDate" class="label-primary">Fecha del Servicio:</label>
+      <input type="date" id="serviceDate">
+
+      <label for="mensajeInicial" class="label-primary">Mensaje Inicial:</label>
+      <textarea id="mensajeInicial" class="box-area" placeholder="Ingrese mensaje inicial" rows="2" oninput="autoGrow(this)"></textarea>
+
+    </form>
+  </div>
+  
+  <!-- Detalles del programa -->
+  <div class="container">
+    <form id="programInfo">
+
+      <label for="Director" class="label-primary">Dirección:</label>
+      <input type="text" id="Director" placeholder="Ingrese Nombre de Hno(a)">
+
+      <label for="alabanzas" class="label-primary">Alabanzas:</label>
+      <input type="text" id="alabanzas" placeholder="Ingrese Nombre de Hno(a)">
+
+      <label for="ofrendas" class="label-primary">Ofrendas:</label>
+      <input type="text" id="ofrendas" placeholder="Ingrese Nombre de Hno(a)">
+
+      <label for="mensaje1" class="label-primary">Mensaje:</label>
+      <input type="text" id="mensaje1" placeholder="Ingrese Nombre de Hno(a)">
+
+      <!-- Especiales -->
+      <label for="especialGrupo" class="label-primary">Encargado de Especial de Grupo:</label>
+      <input type="text" id="especialGrupo" placeholder="Ingrese encargado (opcional)">
+
+      <label class="label-primary">Especiales:</label>
+      <div id="especiales-container">
+        <input type="text" id="esp1" placeholder="1. Especial, Nombre de Hno(a)">
+        <input type="text" id="esp2" placeholder="2. Especial, Nombre de Hno(a)">
+        <input type="text" id="esp3" placeholder="3. Especial, Nombre de Hno(a)">
+      </div>
+
+      <label for="Puerta" class="label-primary">Puerta:</label>
+      <input type="text" id="Puerta" placeholder="Ingrese Nombre de Hno(a)">
+
+      <label for="bocadillos" class="label-primary">Bocadillos:</label>
+      <input type="text" id="bocadillos" placeholder="Ingrese Nombre de Hno(a)">
+
+    </form>
+  </div>
+
+  <!-- Mensaje final -->
+  <div class="container" id="sendToWhatsApp">
+
+    <label for="mensajeFinal" class="label-primary">Mensaje Final:</label>
+    <textarea id="mensajeFinal" class="box-area" placeholder="Ingrese mensaje final" rows="2" oninput="autoGrow(this)"></textarea>
+
+    <button onclick="sendToWhatsApp()">Enviar a WhatsApp</button>
+
+  </div>
+
+  <script src="viernes.js" defer></script>
+
+</body>
+</html>
