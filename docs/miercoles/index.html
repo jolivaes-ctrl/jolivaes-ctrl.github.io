@@ -1,0 +1,57 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Miercoles | Culto de Oración</title>
+  <link rel="stylesheet" href="M-Style.css">
+  <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <text y='0.9em' font-size='90'>📕</text>
+    </svg>">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Culto de Oración</h1>
+
+    <!-- Información general -->
+    <form id="generalInfo">
+
+      <label for="serviceDate" class="label-primary">Fecha del Servicio:</label>
+      <input type="date" id="serviceDate">
+
+      <label for="mensajeInicial" class="label-primary">Mensaje Inicial:</label>
+      <textarea id="mensajeInicial" class="box-area" placeholder="Ingrese mensaje inicial" rows="2" oninput="autoGrow(this)"></textarea>
+
+    </form>
+    </div>
+    
+    <div class="container">
+    <form id="programInfo">
+
+      <label for="Director" class="label-primary">Dirección:</label>
+      <input type="text" id="Director" placeholder="Ingrese Nombre de Hno(a)">
+
+      <label for="alabanzas" class="label-primary">Alabanzas:</label>
+      <input type="text" id="alabanzas" placeholder="Ingrese Nombre de Hno(a)">
+
+      <label for="mensaje1" class="label-primary">Mensaje:</label>
+      <input type="text" id="mensaje1" placeholder="Ingrese Nombre de Hno(a)">
+
+    </form>
+  </div>
+
+  <!-- Mensaje final -->
+  <div class="container" id="sendToWhatsApp">
+
+    <label for="mensajeFinal" class="label-primary">Mensaje Final:</label>
+    <textarea id="mensajeFinal" class="box-area" placeholder="Ingrese mensaje final" rows="2" oninput="autoGrow(this)"></textarea>
+
+    <button onclick="sendToWhatsApp()">Enviar a WhatsApp</button>
+
+  </div>
+
+  <script src="Miercoles.js" defer></script>
+
+</body>
+</html>
