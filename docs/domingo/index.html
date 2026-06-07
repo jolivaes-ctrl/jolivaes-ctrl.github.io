@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Culto Dominical | Programa General</title>
+  <link rel="stylesheet" href="D-style.css">
+  <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <text y='0.9em' font-size='90'>⛪</text>
+    </svg>">
+</head>
+<body>
+  <div class="container">
+    <h1>Programa de Culto
+    </h1>
+    
+
+    <div id="Recordatorio" >
+      <label for="recordatorioMessage" class="label-secondary">Recordatorio:</label>
+      <input type="text" id="recordatorioMessage" placeholder="ingrese su mensaje" data-emoji="true">
+      <div class="emoji-palette" aria-hidden="false" id="emojiPalette">
+        <button type="button" onclick="insertEmoji('🙏','recordatorioMessage')">🙏</button>
+        <button type="button" onclick="insertEmoji('😊','recordatorioMessage')">😊</button>
+        <button type="button" onclick="insertEmoji('🎵','recordatorioMessage')">🎵</button>
+        <button type="button" onclick="insertEmoji('❤️','recordatorioMessage')">❤️</button>
+      </div>
+    </div>
+    </div>
+    <div class="container">
+    <form id="eventForm">
+  <label for="serviceDate" class="label-primary">Fecha del Servicio:</label>
+      <input type="date" id="serviceDate" placeholder="Ej: 15 de Septiembre, 2025">
+
+  <label for="anuncios" class="label-secondary">Anuncios:</label>
+      <input type="text" id="anuncios" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label for="dirige" class="label-primary">Dirige:</label>
+      <input type="text" id="dirige" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label for="ofrendas" class="label-primary">Ofrendas:</label>
+      <input type="text" id="ofrendas" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label for="alabanzas" class="label-primary">Alabanzas:</label>
+      <input type="text" id="alabanzas" placeholder="Ingrese Nombre de Hno(a)">
+  
+  <label for="mensaje" class="label-primary">Mensaje:</label>
+      <input type="text" id="mensaje" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label for="puerta" class="label-primary">Puerta:</label>
+      <input type="text" id="puerta" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label for="parqueo" class="label-primary">Parqueo:</label>
+      <input type="text" id="parqueo" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label for="bocadillos" class="label-primary">Bocadillos:</label>
+      <input type="text" id="bocadillos" placeholder="Ingrese Nombre de Hno(a)">
+
+    </form>
+    </div>
+
+    <div class="container">
+    <div id="sendToWhatsApp">
+      <label for="whatsappMessage" class="label-secondary">Mensaje Final:</label>
+      <textarea id="whatsappMessage" placeholder="ingrese su mensaje" rows="2" oninput="autoGrow(this)"></textarea>
+  <button onclick="sendToWhatsApp(document.getElementById('whatsappMessage').value)"> Send to WhatsApp</button>
+  <button class="debug-btn" onclick="debugWhatsAppUrl()" title="Copy and log the generated WhatsApp URL for inspection">Debug URL</button>    
+</div>
+    
+    <!-- Visible debug area for the generated message and encoded URLs -->
+    <div id="whatsappDebug" aria-live="polite" style="margin-top:12px;padding:10px;border:1px dashed #ccc;background:#fafafa;display:none;"></div>
+
+    <div style="margin-top:12px;">
+      <label for="qrHost" style="display:inline-block;margin-right:8px;font-size:13px;">QR host (optional):</label>
+      <input id="qrHost" placeholder="192.168.1.12:8000" style="display:inline-block;padding:6px 8px;font-size:13px;width:160px;margin-right:8px;" />
+      <button id="showQrBtn" onclick="showQr()" style="width:auto;display:inline-block;padding:8px 12px;margin-top:8px;">Show QR (phone)</button>
+      <div id="qrArea" style="margin-top:8px;display:none;padding:8px;border:1px solid #eee;background:#fff;">
+        <div id="qrMessage" style="font-size:13px;color:#333;margin-bottom:8px"></div>
+        <img id="qrImage" alt="QR code" style="max-width:220px;display:block;margin:0 auto;" />
+        <div style="font-size:12px;color:#666;margin-top:6px">Scan this QR with your phone camera to open this page (requires the page to be served over HTTP/HTTPS).</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Domingo.js" defer></script>
+</body>
+</html>
