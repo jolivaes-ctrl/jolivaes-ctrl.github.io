@@ -1,0 +1,72 @@
+/* ---------- GLOBAL COLORS ---------- */
+:root {
+    --primary-blue: #1F4E79;      /* Deep Blue */
+    --neutral-slate: #708090;     /* Slate Gray */
+    --bg-light: #F5F5F5;          /* Warm White */
+    --accent-orange: #FF9F1C;     /* Orange Amber */
+    --accent-teal: #008080;       /* Teal */
+    --accent-magenta: #E63946;    /* Magenta */
+    --pop-lime: #A8DADC;          /* Lime Green */
+    --pop-gold: #FFD166;          /* Soft Gold */
+    --text-dark: #222;
+    --text-light: #fff;
+}
+
+/* ---------- PAGE LAYOUT ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.subtitle {
+    margin-top: -10px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    display: block;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Color categories */
+.orange { background: var(--accent-orange); }
+.green { background: var(--accent-teal); }
+.purple { background: var(--accent-magenta); }
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: var(--neutral-slate);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
