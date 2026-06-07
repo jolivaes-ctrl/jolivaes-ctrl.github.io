@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayuno | Programa de Ayunos congregacionales</title>
+  <link rel="stylesheet" href="A-style.css">
+  <link rel="icon" href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+  <text y='0.9em' font-size='90'>🌯</text>
+  </svg>">
+</head>
+
+<body>
+<div class="container">
+  <h1>Programa de Ayuno</h1>
+
+  <!-- SALUDOS -->
+  <label class="label-secondary">Saludos:</label>
+  <textarea id="Saludos" placeholder="Ingrese su mensaje" rows="2" oninput="autoGrow(this)"></textarea>
+
+  <!-- FECHA -->
+  <label class="label-primary">Fecha del Servicio:</label>
+  <input type="date" id="serviceDate">
+</div>
+
+<!-- PARTE 1 -->
+<div class="container">
+  <h2>Parte 1</h2>
+
+  <label class="label-primary">Oración y Adoración:</label>
+  <input type="text" id="oracion" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label class="label-primary">Lectura:</label>
+  <input type="text" id="lectura" placeholder="Ingrese Nombre de Hno(a)">
+</div>
+
+<!-- PARTE 2 -->
+<div class="container">
+  <h2>Parte 2</h2>
+
+  <label class="label-primary">Dirigir:</label>
+  <input type="text" id="dirigir1" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label class="label-primary">Adoración:</label>
+  <input type="text" id="adoracion1" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label class="label-primary">Enseñanza:</label>
+  <input type="text" id="enseñanza1" placeholder="Tema de Enseñanza, Nombre de Hno(a)">
+
+  <label class="label-primary">Oración:</label>
+  <label class="label-tertiary">Ingrese hasta 4 peticiones de oracion para los cultos de Ayuno</label>
+  <div id="oracion2-container">
+    <input type="text" id="oracion2-1" placeholder="Petición de oración, Nombre de Hno(a)">
+    <input type="text" id="oracion2-2" placeholder="Petición de oración, Nombre de Hno(a)">
+    <input type="text" id="oracion2-3" placeholder="Petición de oración, Nombre de Hno(a)">
+    <input type="text" id="oracion2-4" placeholder="Petición de oración, Nombre de Hno(a)">
+  </div>
+
+  <button type="button" class="more-button"
+    onclick="addInput('oracion2-container', event)">
+    + Agregar otro
+  </button>
+</div>
+
+<!-- PARTE 3 -->
+<div class="container">
+  <h2>Parte 3</h2>
+
+  <label class="label-primary">Dirigir:</label>
+  <input type="text" id="dirigir2" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label class="label-primary">Adoración:</label>
+  <input type="text" id="adoracion2" placeholder="Ingrese Nombre de Hno(a)">
+
+  <label class="label-primary">Enseñanza:</label>
+  <input type="text" id="enseñanza2" placeholder="Tema de Enseñanza, Nombre de Hno(a)">
+
+  <label class="label-primary">Oración:</label>
+  <label class="label-tertiary">Ingrese hasta 4 peticiones de oracion para los cultos de Ayuno</label>
+  <div id="oracion3-container">
+    <input type="text" id="oracion3-1" placeholder="Petición de oración, Nombre de Hno(a)">
+    <input type="text" id="oracion3-2" placeholder="Petición de oración, Nombre de Hno(a)">
+    <input type="text" id="oracion3-3" placeholder="Petición de oración, Nombre de Hno(a)">
+    <input type="text" id="oracion3-4" placeholder="Petición de oración, Nombre de Hno(a)">
+  </div>
+
+  <button type="button" class="more-button"
+    onclick="addInput('oracion3-container', event)">
+    + Agregar otro
+  </button>
+</div>
+
+<!-- Final Message -->
+<div class="container">
+  <label for="finalMessage" class="label-secondary">Mensaje Final:</label>
+  <textarea id="FinalMessage" placeholder="Ingrese su mensaje" rows="2" oninput="autoGrow(this)"></textarea>
+
+  <!-- WHATSAPP -->
+  <button type="button" id="whatsappButton" onclick="sendToWhatsApp()">
+    Enviar a WhatsApp
+  </button>
+</div>
+</div>
+
+<script src="Ayuno.js" defer></script>
+</body>
+</html>
