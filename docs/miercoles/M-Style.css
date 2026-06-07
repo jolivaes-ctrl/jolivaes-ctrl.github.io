@@ -1,0 +1,211 @@
+/* ===== Global ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e0b45e, #ba550d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  margin: 20px;
+  padding: 20px;
+  color: #225931; /* primary readable text */
+}
+
+/* Soft overlay for contrast */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(34, 89, 49, 0.08);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===== Main Container ===== */
+.container {
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fffaf0;
+  color: #225931;
+  box-sizing: border-box;
+  overflow: auto;
+  max-width: 475px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+textarea {
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fffaf0;
+  color: #225931;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* ===== Headings ===== */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 36px;
+  color: #225931;
+}
+
+h2 {
+  text-align: left;
+  color: #c8752d;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+h2:hover {
+  color: #ba550d;
+}
+
+/* ===== Labels ===== */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #225931;
+}
+
+.label-primary {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #225931;
+}
+
+.label-secondary {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3e7a4c; /* softer green */
+}
+
+/* ===== Inputs ===== */
+input[type="text"],
+select,
+input[type="color"],
+textarea#whatsappMessage {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fffaf0;
+  color: #225931;
+  box-sizing: border-box;
+}
+
+/* ===== Buttons ===== */
+button {
+  margin-top: 20px;
+  padding: 16px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #c8752d;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ba550d;
+}
+
+/* Secondary / More button */
+.more-button {
+  background-color: #225931;
+}
+
+.more-button:hover {
+  background-color: #1b4727;
+}
+
+/* Debug button */
+.debug-btn {
+  background-color: transparent;
+  color: #225931;
+  border: 1px dashed #225931;
+  padding: 8px 10px;
+  font-size: 12px;
+  width: auto;
+  margin-left: 8px;
+  opacity: 0.6;
+}
+
+.debug-btn:hover {
+  opacity: 1;
+  background: rgba(34, 89, 49, 0.08);
+}
+
+
+/* ===== Emoji Palette ===== */
+.emoji-palette {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  background: #fffaf0;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(34, 89, 49, 0.25);
+  gap: 6px;
+}
+
+.emoji-palette.show {
+  display: flex;
+}
+
+.emoji-palette button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.emoji-palette button:hover {
+  background: #e0b45e;
+}
+
+/* ===== QR Area ===== */
+#qrArea img {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #225931;
+}
+
+#qrArea p {
+  font-size: 14px;
+  color: #225931;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 14px; border-radius: 6px;
+  }
+
+  button {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
