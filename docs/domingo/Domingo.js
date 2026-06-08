@@ -26,7 +26,7 @@ function getFormValues() {
     mensaje: document.getElementById('mensaje')?.value || '',
     puerta: document.getElementById('puerta')?.value || '',
     parqueo: document.getElementById('parqueo')?.value || '',
-    anuncios: document.getElementById('anuncios')?.valeu || '',
+    anuncios: document.getElementById('anuncios')?.value || '',
     bocadillos: document.getElementById('bocadillos')?.value || '',
     recordatorio: document.getElementById('recordatorioMessage')?.value || '',
     whatsappMessage: document.getElementById('whatsappMessage')?.value || ''
