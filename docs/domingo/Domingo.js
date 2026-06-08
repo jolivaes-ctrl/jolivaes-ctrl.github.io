@@ -89,7 +89,7 @@ const lines = [];
 if (vals.dirige)   lines.push(`*Dirige:* ${vals.dirige}`);
 if (vals.alabanzas) lines.push(`*Alabanzas:* ${vals.alabanzas}`);
 if (vals.ofrendas) lines.push(`*Ofrendas:* ${vals.ofrendas}`);
-if (vals.anuncios) lines.push(`*_Anuncios:* ${vals.anuncios}_`);
+if (vals.anuncios) lines.push(`*_Anuncios:_* _${vals.anuncios}_`);
 if (vals.mensaje)  lines.push(`*Mensaje:* ${vals.mensaje}`);
 
 // ONLY show these if filled
