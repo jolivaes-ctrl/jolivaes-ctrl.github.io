@@ -56,7 +56,7 @@ function buildWhatsAppMessage() {
 
   /* -------- MENSAJE INICIAL -------- */
   const saludo = getValue('Saludos');
-  const finalMessage = getValue('finalMessage');
+  const finalMessage = getValue('FinalMessage');
   const fecha = formatDateToSpanishTitle(getValue('serviceDate'));
 
   if (saludo) msg.push(saludo);
@@ -114,7 +114,7 @@ function buildWhatsAppMessage() {
 
 
 function sendToWhatsApp() {
-  const message = buildWhatsAppMessage1();
+  const message = buildWhatsAppMessage();
   const url = "https://api.whatsapp.com/send?text=" + encodeURIComponent(message);
   window.open(url, "_blank");
 }
