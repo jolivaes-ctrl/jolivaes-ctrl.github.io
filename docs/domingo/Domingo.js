@@ -26,6 +26,7 @@ function getFormValues() {
     mensaje: document.getElementById('mensaje')?.value || '',
     puerta: document.getElementById('puerta')?.value || '',
     parqueo: document.getElementById('parqueo')?.value || '',
+    anuncios: document.getElementById('anuncios')?.valeu || '',
     bocadillos: document.getElementById('bocadillos')?.value || '',
     recordatorio: document.getElementById('recordatorioMessage')?.value || '',
     whatsappMessage: document.getElementById('whatsappMessage')?.value || ''
@@ -88,6 +89,7 @@ const lines = [];
 if (vals.dirige)   lines.push(`*Dirige:* ${vals.dirige}`);
 if (vals.alabanzas) lines.push(`*Alabanzas:* ${vals.alabanzas}`);
 if (vals.ofrendas) lines.push(`*Ofrendas:* ${vals.ofrendas}`);
+if (vals.anuncios) lines.push(`*Anuncios:* ${vals.anuncios}`);
 if (vals.mensaje)  lines.push(`*Mensaje:* ${vals.mensaje}`);
 
 // ONLY show these if filled
